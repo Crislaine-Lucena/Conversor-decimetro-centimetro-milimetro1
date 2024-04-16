@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in); 
+
+        System.out.println("Insira o que vc quer converter em metros: ");
+
+        
+        if (entrada.hasNextDouble()) { // no caso hasdouble verifica se realmente é um double
+            double metros = entrada.nextDouble();
+
+            double decimetros = metros / 10;
+            double centimetros = metros / 100;
+            double milimetros = metros / 1000;
+
+            System.out.printf("em decimetros: %.2f \n", decimetros);
+            System.out.printf("em centimetros: %.2f \n", centimetros);
+            System.out.printf("em milimetros: %.2f \n", milimetros);
+        } else {
+            System.out.println("Erro: Nenhuma entrada válida foi fornecida.");
+        }
+
+        entrada.close();  
+}
